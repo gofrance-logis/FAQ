@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="박스·테이프, 소요 시간, 결제, 배송 기간, 면세 한도, 금지품목">
+<meta property="og:title" content="고프랑 셀프존 자주 묻는 질문">
+<meta property="og:description" content="박스·테이프, 소요 시간, 결제, 배송 기간, 면세 한도, 금지품목">
+<meta property="og:type" content="website">
+<title>고프랑 셀프존 FAQ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+/* 레이아웃: 휴대폰(카톡 인앱 브라우저) 기준 한 줄 칼럼, 질문 아코디언 */
+:root{
+  --bg:#ffffff; --ink:#1c2230; --muted:#5d6475; --line:#e4e6ec; --soft:#f5f6f9;
+  --blue:#1f3f8f; --red:#c63a3f; --yellow:#f4d03f;
+  --sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --serif:"Noto Serif KR","AppleMyungjo",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c; --ink:#e9ebf0; --muted:#a2a8b6; --line:#2a2f3b; --soft:#1a1e27;
+  --blue:#8ea8ec; --red:#ec7a7e; --yellow:#e3c24a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151c; --ink:#e9ebf0; --muted:#a2a8b6; --line:#2a2f3b; --soft:#1a1e27;
+  --blue:#8ea8ec; --red:#ec7a7e; --yellow:#e3c24a; color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;
+  word-break:keep-all;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding-block:28px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+.flag{display:flex;width:42px;height:4px;margin-bottom:18px}
+.flag i{flex:1}.flag i:nth-child(1){background:var(--blue)}.flag i:nth-child(2){background:var(--line)}.flag i:nth-child(3){background:var(--red)}
+.brand{font-size:13px;color:var(--muted);letter-spacing:.04em;margin:0 0 6px}
+h1{font-family:var(--serif);font-size:26px;line-height:1.35;margin:0 0 10px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 26px}
+
+.group{margin:0 0 26px}
+.group h2{font-size:13px;font-weight:600;color:var(--blue);letter-spacing:.06em;margin:0 0 6px}
+details{border-bottom:1px solid var(--line)}
+.group details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:15px 2px;font-weight:600;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary .q{color:var(--red);font-family:var(--serif);flex:none}
+summary .t{flex:1;min-width:0}
+summary .pm{flex:none;width:18px;height:18px;margin-top:4px;position:relative}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:3px;right:3px;top:8px;height:2px;background:var(--muted);transition:transform .2s}
+summary .pm::after{transform:rotate(90deg)}
+details[open] summary .pm::after{transform:rotate(0)}
+summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+.a{padding:0 2px 18px 28px;color:var(--ink)}
+.a p{margin:0 0 8px}
+.a ul{margin:0 0 8px;padding-left:18px}
+.a li{margin:2px 0}
+.note{color:var(--muted);font-size:14px}
+b{font-weight:600}
+.sticker{display:inline-block;background:var(--yellow);color:#2a2410;padding:0 6px;border-radius:3px;font-weight:600;font-size:14px}
+
+.formula{background:var(--soft);border-radius:8px;padding:12px 14px;margin:8px 0;font-variant-numeric:tabular-nums}
+.formula code{font-family:var(--sans);font-weight:600}
+
+.calc{background:var(--soft);border-radius:10px;padding:14px;margin:12px 0 4px}
+.calc .row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.calc label{display:flex;flex-direction:column;font-size:12.5px;color:var(--muted);gap:4px}
+.calc input{width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-variant-numeric:tabular-nums}
+.calc input:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.res{margin-top:12px;font-variant-numeric:tabular-nums;font-size:14.5px}
+.res .big{font-size:18px;font-weight:600;color:var(--blue)}
+
+.links{border-top:1px solid var(--line);padding-top:20px;display:grid;gap:10px}
+.links a{display:flex;justify-content:space-between;gap:10px;color:var(--ink);text-decoration:none;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-weight:500}
+.links a span{color:var(--muted)}
+.links a:focus-visible{outline:2px solid var(--blue)}
+.addr{margin-top:18px;font-size:14px;color:var(--muted)}
+.addr b{color:var(--ink);user-select:all}
+footer{margin-top:26px;font-size:13px;color:var(--muted)}
+@media (max-width:380px){.calc .row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){summary .pm::before,summary .pm::after{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="flag"><i></i><i></i><i></i></div>
+  <p class="brand">gofrance · 파리 6구 셀프존</p>
+  <h1>셀프존 자주 묻는 질문</h1>
+  <p class="lead">방문 전에 궁금한 점, 여기서 먼저 확인해 주세요.<br>질문을 누르면 답이 열립니다.</p>
+
+  <section class="group">
+    <h2>준비물 · 이용</h2>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">박스는 준비되어 있나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p>네, 1kg용부터 20kg용까지 사이즈별로 준비되어 있습니다.</p>
+        <p class="note">박스는 유료이며, 현장에서 구매하실 수 있어요.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">테이프나 저울도 쓸 수 있나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <ul>
+          <li>테이프: 무료로 사용 가능</li>
+          <li>저울: 현장에 있어요</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">시간은 얼마나 걸리나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <ul>
+          <li><b>박스</b>: 보통 30분~1시간 (짐 양에 따라 달라져요)</li>
+          <li><b>캐리어</b>: 약 15분</li>
+        </ul>
+        <p class="note">캐리어는 <span class="sticker">노란 스티커</span>에 양식대로 적어서 붙이고 두고 가시면 됩니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="group">
+    <h2>예약 · 운영 시간</h2>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">영업시간이 어떻게 되나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <ul>
+          <li>여름: 08:00 ~ 20:00</li>
+          <li>겨울: 09:00 ~ 19:00</li>
+        </ul>
+        <p class="note">이외 시간은 부득이한 경우 카톡 채널로 상담 남겨주세요.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">늦거나 예약을 바꿔야 하면요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p>지각, 예약 변경 모두 가능합니다.</p>
+        <p class="note">대신 카톡 채널로 <b>바로</b> 알려주세요.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="group">
+    <h2>결제 · 배송</h2>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">결제는 언제, 어떻게 하나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p>방문 당일이 아니라, <b>출고 일정에 맞춰 청구서</b>를 보내드려요.<br>청구서 받으시면 그때 결제해 주시면 됩니다.</p>
+        <p><b>결제 방법</b></p>
+        <ul>
+          <li>유로 송금 (프랑스 법인계좌)</li>
+          <li>한화 송금 (한국 법인계좌)</li>
+          <li>트래블월렛 · 트래블로그 · 쏠트래블</li>
+        </ul>
+        <p class="note">송금 후 내역 캡처해서 카톡으로 보내주세요.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">배송은 얼마나 걸리나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p>출고일로부터 <b>5~7일 이내</b> 도착합니다. (통관에 문제가 없을 때)</p>
+        <p class="note">출고일은 접수한 날이 아니라, 짐이 <b>비행기를 타는 날</b>입니다.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">배송비는 어떻게 계산되나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p><b>실제 무게</b>와 <b>부피 무게</b> 중 더 큰 쪽으로 계산됩니다.</p>
+        <div class="formula">부피 무게(kg) = <code>가로 × 세로 × 높이(cm) ÷ 5000</code></div>
+        <p class="note">예) 50 × 40 × 40cm 박스 → 16kg<br>실제 무게가 12kg이어도 16kg 기준으로 계산돼요.</p>
+
+        <div class="calc" aria-label="부피 무게 계산기">
+          <div class="row">
+            <label for="cw">가로 cm<input id="cw" type="number" inputmode="decimal" value="50"></label>
+            <label for="cl">세로 cm<input id="cl" type="number" inputmode="decimal" value="40"></label>
+            <label for="ch">높이 cm<input id="ch" type="number" inputmode="decimal" value="40"></label>
+            <label for="ck">실제 kg<input id="ck" type="number" inputmode="decimal" value="12"></label>
+          </div>
+          <div class="res" id="res" aria-live="polite"></div>
+        </div>
+        <p class="note">숫자를 바꿔서 내 박스로 확인해 보세요.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="group">
+    <h2>통관 · 금지품목</h2>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">면세 한도가 있나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <ul>
+          <li><b>새 물품</b>(구매품·선물): 물품가격 미화 150달러 이하 면세</li>
+          <li><b>주류</b>(와인·위스키 등): 1인당 1병까지 면세</li>
+        </ul>
+        <p class="note">한도를 넘으면 관부가세가 나올 수 있으며 고객님 부담입니다.<br>최종 판단은 한국 세관에서 합니다.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">보내면 안 되는 물건이 있나요?</span><span class="pm"></span></summary>
+      <div class="a">
+        <p><b>발송 불가</b></p>
+        <ul>
+          <li>가스 충전식 스프레이, 폭발성·가연성 제품</li>
+          <li>담배, 라이터, 성냥, 폭죽, 페인트, 메탄올</li>
+          <li>과일, 채소, 씨앗, 꽃 등 식물 / 상하기 쉬운 음식, 동물뼈</li>
+          <li>대형 리튬이온 배터리, 자성이 강한 제품</li>
+          <li>23cm 넘는 칼 등 무기류</li>
+          <li>현금(지폐·동전), 고가 우표</li>
+        </ul>
+        <p><b>직접 가져가시길 권장</b></p>
+        <ul>
+          <li>노트북, 휴대폰, 아이패드, 카메라 (파손 위험)</li>
+          <li>졸업장, 논문 원본 등 재발행 안 되는 서류</li>
+        </ul>
+        <p class="note">향수·미스트는 가능, 치즈·버터는 겨울에만 가능해요.<br>반송 사유 대부분이 금지품목과 포장 불량이라 짐 싸기 전에 꼭 확인해 주세요.</p>
+        <p><a href="https://gofran.co.kr/Information/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=780673&t=board" target="_blank" rel="noopener" style="color:var(--blue)">금지품목 전체 보기 ›</a></p>
+      </div>
+    </details>
+  </section>
+
+  <nav class="links">
+    <a href="https://gofran.co.kr/tarif-korea" target="_blank" rel="noopener">배송비 확인하기 <span>›</span></a>
+    <a href="https://gofran.co.kr/Booking?svc=intl" target="_blank" rel="noopener">국제배송 신청서 작성 <span>›</span></a>
+  </nav>
+  <p class="addr">방문 주소<br><b>103 rue du Cherche-Midi, 75006 Paris</b></p>
+
+  <footer>그 밖의 문의는 고프랑 카톡 채널로 남겨주세요.<br>고프랑 드림🇫🇷</footer>
+</div>
+
+<script>
+(function(){
+  var ids=["cw","cl","ch","ck"],res=document.getElementById("res");
+  function f(n){return Math.round(n*10)/10}
+  function run(){
+    var v=ids.map(function(i){return parseFloat(document.getElementById(i).value)||0});
+    var vol=v[0]*v[1]*v[2]/5000, real=v[3];
+    if(!v[0]||!v[1]||!v[2]){res.textContent="가로·세로·높이를 입력해 주세요.";return}
+    var use=Math.max(vol,real), which=vol>=real?"부피 무게":"실제 무게";
+    res.innerHTML="부피 무게 "+f(vol)+"kg · 실제 무게 "+f(real)+"kg<br>적용 무게 <span class=\"big\">"+f(use)+"kg</span> ("+which+")";
+  }
+  ids.forEach(function(i){document.getElementById(i).addEventListener("input",run)});
+  run();
+})();
+</script>
+
+</body>
+</html>
